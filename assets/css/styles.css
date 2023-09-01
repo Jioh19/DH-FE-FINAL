@@ -7,10 +7,18 @@
 	font-family: "Be Vietnam Pro";
 }
 
+button {
+	border: none;
+	padding: 0.75rem 2rem;
+	border-radius: 30px;
+	color: white;
+	background-color: var(--color-primary);
+}
 /* Estilo del Header */
 header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	border: red 2px solid;
 	padding: 3rem 6rem;
 }
@@ -20,6 +28,14 @@ nav {
 	gap: 2rem;
 }
 
+.nav-item {
+	color: var(--color-tertiary);
+}
+
+.nav-disabled {
+	color: grey;
+	cursor: not-allowed;
+}
 /* Fin Estilo del Header */
 
 /* Estilo de Intro */
@@ -39,11 +55,17 @@ nav {
 
 .intro-article {
 	display: flex;
+	width: 50%;
 	flex-direction: column;
 	justify-content: space-between;
 	padding-block: 1rem;
 	padding-inline: 5rem 1rem;
 	text-align: right;
+	align-items: flex-end;
+}
+.intro-article button {
+	text-align: right;
+	width: 8rem;
 }
 h1 {
 	font-size: xx-large;
@@ -53,20 +75,163 @@ h1 {
 
 /* Estilo de Mid */
 .mid {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	height: 8rem;
 	background-color: var(--color-primary);
 	color: white;
 }
 .mid-container {
 	display: flex;
-    align-items: center;
+	align-items: center;
 	max-width: 70rem;
 	margin: auto;
 }
 .mid h2,
 .mid p {
 	width: 50%;
-    padding-inline: 2rem;
+	padding-inline: 2rem;
+}
+
+.mid-cards {
+	padding: 2rem 6rem;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--color-quaternary);
+	justify-content: space-around;
+	gap: 2rem;
+}
+
+.mid-card {
+	width: 45%;
+}
+/* Fin estilo Mid */
+
+/* Estilo de Bottom */
+.bottom {
+	text-align: center;
+}
+
+h2 {
+	padding: 4rem;
+}
+.bottom-cards {
+	display: flex;
+	gap: 2rem;
+	padding-inline: 2rem;
+	margin: 2rem 5rem;
+	background-color: var(--color-quaternary);
+}
+.bottom-card {
+	border: green 2px solid;
+	padding-block: 3rem 1rem;
+	position: relative;
+	text-align: center;
+}
+.bottom-card img {
+	position: absolute;
+	top: -35px;
+	left: calc(50% - 35px);
+}
+/* Fin estilo Bottom */
+
+/* Estilo de Footer */
+.pre-footer {
+	display: flex;
+	margin-top: 5rem;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--color-primary);
+	color: white;
+}
+.pre-footer button {
+	color: var(--color-primary);
+	background-color: white;
+	height: 3rem;
+}
+footer {
+	color: white;
+	background-color: var(--color-tertiary);
+	text-align: center;
+	padding: 3rem;
+}
+.footer {
+	display: flex;
+	justify-content: space-around;
+}
+.footer a {
+	color: white;
+}
+
+.footer-links {
+	display: flex;
+}
+.footer-link {
+	display: flex;
+	flex-direction: column;
+}
+input {
+	border: none;
+	padding: 0.75rem 2rem;
+	border-radius: 30px;
+	color: white;
+	transition: all 0.5s ease-in-out;
+}
+
+/* Fin estilo Footer */
+
+/* Inicio Media Query */
+header {
+	display: none;
+}
+@media (max-width: 950px) {
+	.intro {
+		flex-direction: column;
+	}
+	.intro img,
+	.intro-article {
+		margin: auto;
+		width: 90%;
+	}
+	.mid {
+		height: 16rem;
+		background-color: var(--color-secondary);
+	}
+	.mid-container {
+		flex-direction: column;
+
+		padding-bottom: 2rem;
+	}
+	.mid h2,
+	.mid p {
+		width: 90%;
+		padding-inline: 2rem;
+	}
+	.mid-cards {
+		flex-direction: column;
+	}
+	.mid-card {
+		margin: auto;
+		width: 80%;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.pre-footer {
+		background-color: var(--color-secondary);
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+
+	.pre-footer button {
+		color: white;
+		background-color: var(--color-tertiary);
+		height: 3rem;
+	}
+
+	.footer {
+		flex-direction: column-reverse;
+	}
 }
