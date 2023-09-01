@@ -77,7 +77,7 @@ h1 {
 .mid {
 	display: flex;
 	align-items: center;
-	height: 8rem;
+
 	background-color: var(--color-primary);
 	color: white;
 }
@@ -94,7 +94,7 @@ h1 {
 }
 
 .mid-cards {
-	padding: 2rem 6rem;
+	padding: 2rem 2rem;
 	display: flex;
 	flex-wrap: wrap;
 	background-color: var(--color-quaternary);
@@ -118,8 +118,7 @@ h2 {
 .bottom-cards {
 	display: flex;
 	gap: 2rem;
-	padding-inline: 2rem;
-	margin: 2rem 5rem;
+	margin: 2rem ;
 	background-color: var(--color-quaternary);
 }
 .bottom-card {
@@ -181,20 +180,20 @@ input {
 /* Fin estilo Footer */
 
 /* Inicio Media Query */
-header {
-	display: none;
-}
+
 @media (max-width: 950px) {
+	nav {
+		display: none;
+	}
 	.intro {
 		flex-direction: column;
 	}
 	.intro img,
 	.intro-article {
 		margin: auto;
-		width: 90%;
+		width: 100%;
 	}
 	.mid {
-		height: 16rem;
 		background-color: var(--color-secondary);
 	}
 	.mid-container {
@@ -204,7 +203,7 @@ header {
 	}
 	.mid h2,
 	.mid p {
-		width: 90%;
+		width: 100%;
 		padding-inline: 2rem;
 	}
 	.mid-cards {
@@ -212,7 +211,7 @@ header {
 	}
 	.mid-card {
 		margin: auto;
-		width: 80%;
+		width: 100%;
 	}
 
 	.hide {
