@@ -281,6 +281,8 @@ input {
 		position: absolute;
 		top: 90px;
 		right: -150px;
+		transition: all 0.5s ease-in-out;
+
 	}
 	.nav-hidden-checkbox:checked ~ nav {
 		background-color: rgba(255, 255, 255, 0.85);
@@ -289,10 +291,12 @@ input {
 		transform: translateX(-130px);
 	}
 	.nav-hidden-checkbox:checked ~ .hamburger {
+		transition: all 0.5s ease-in-out;
 		background-image: url("../img/icon-close.svg");
 	}
 	.hamburger {
 		display: block;
+		transition: all 0.5s ease-in-out;
 		background-image: url("../img/icon-hamburger.svg");
 		background-size: auto;
 		background-repeat: no-repeat;
