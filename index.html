@@ -9,15 +9,21 @@
 	</head>
 	<body>
 		<header>
-			<img src="./assets/img/logo.svg" alt="logo" />
-			<nav class="nav-responsive">
-				<a href="#" class="nav-item">Sports</a>
-				<a href="#" class="nav-item">Products</a>
-				<a href="#" class="nav-item">About Us</a>
-				<a href="#" class="nav-item">Training</a>
-				<a href="#" class="nav-item nav-disabled">Community</a>
-			</nav>
-			<button class="nav-responsive">Contact</button>
+			<div class="header-container">
+				<img src="./assets/img/logo.svg" alt="logo" />
+				<input type="checkbox" class="nav-hidden-checkbox" id="nav-on" />
+				<nav>
+					<a href="#" class="nav-item">Sports</a>
+					<a href="#" class="nav-item">Products</a>
+					<a href="#" class="nav-item">About Us</a>
+					<a href="#" class="nav-item">Training</a>
+					<a href="#" class="nav-item nav-disabled">Community</a>
+				</nav>
+				<label for="nav-on" class="hamburger"><img src="./assets/img/icon-hamburger.svg" alt="Hamburger" /></label>
+				
+				<button class="nav-responsive shadowed">Contact</button>
+			</div>
+
 		</header>
 		<main>
 			<section class="intro">
@@ -39,28 +45,30 @@
 			</section>
 			<section class="mid-cards">
 				<article class="mid-card">
-					<button>01</button>
-					<div class="card-container">
+					<div class="mid-card-title">
+						<button>01</button>
 						<h3>Track company-wide progress</h3>
-						<p>
-							Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
-							nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
-						</p>
 					</div>
+					<p>
+						Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
+						nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
+					</p>
 				</article>
 				<article class="mid-card">
-					<button>02</button>
-					<div class="card-container">
+					<div class="mid-card-title">
+						<button>02</button>
 						<h3>Advance built-in reports</h3>
-						<p>
-							Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
-							nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
-						</p>
 					</div>
+					<p>
+						Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
+						nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
+					</p>
 				</article>
 				<article class="mid-card">
-					<button>03</button>
-					<h3>Everything you need in one place</h3>
+					<div class="mid-card-title">
+						<button>03</button>
+						<h3>Everything you need in one place</h3>
+					</div>
 					<p>
 						Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel
 						nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.
@@ -98,8 +106,10 @@
 				<button>More</button>
 			</section>
 			<section class="pre-footer">
-				<h2>Get to know the best teams of the year</h2>
-				<button>Go for it</button>
+				<div class="pre-footer-container">
+					<h2>Get to know the best teams of the year</h2>
+					<button class="shadowed">Go for it</button>
+				</div>
 			</section>
 			<footer>
 				<div class="footer">
@@ -127,7 +137,7 @@
 						</div>
 					</div>
 					<div class="footer-update">
-						<input  type="text" placeholder="Update in your inbox...">
+						<input type="text" id="update" placeholder="Update in your inbox..." />
 						<button>Go</button>
 					</div>
 				</div>
