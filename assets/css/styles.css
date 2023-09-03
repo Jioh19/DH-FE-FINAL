@@ -6,9 +6,12 @@
 	box-sizing: border-box;
 	font-family: "Be Vietnam Pro";
 }
-
+h1 {
+	color: var(--color-font-primary);
+}
 h2 {
 	font-size: xx-large;
+	color: var(--color-font-primary);
 }
 
 button {
@@ -33,8 +36,8 @@ button:hover {
 header {
 	position: fixed;
 	width: 100%;
-	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, 0.35);
+	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.45);
 	z-index: 100;
 	padding: 1rem 6rem;
 }
@@ -71,7 +74,7 @@ nav {
 	display: flex;
 	max-width: 70rem;
 	margin-inline: auto;
-	padding: 5rem 2rem;
+	padding: 7rem 2rem;
 }
 
 .intro img {
@@ -265,6 +268,7 @@ input {
 /* Inicio Media Query */
 
 @media (max-width: 970px) {
+	/* Inicio estilo header */
 	header {
 		padding: 2rem;
 	}
@@ -275,18 +279,25 @@ input {
 		padding: 0.5rem;
 		gap: 0.5rem;
 		position: absolute;
-		top: -140px;
-		right: 0;
+		top: 90px;
+		right: -150px;
 	}
 	.nav-hidden-checkbox:checked ~ nav {
-		backdrop-filter: blur(10px);
-		background-color: rgba(255, 255, 255, 0.55);
-		z-index: 99;
+		background-color: rgba(255, 255, 255, 0.85);
+		box-shadow: 0 6px 3px 3px rgba(0, 0, 0, 0.45);
 		transition: all 0.5s ease-in-out;
-		transform: translateY(230px);
+		transform: translateX(-130px);
+	}
+	.nav-hidden-checkbox:checked ~ .hamburger {
+		background-image: url("../img/icon-close.svg");
 	}
 	.hamburger {
 		display: block;
+		background-image: url("../img/icon-hamburger.svg");
+		background-size: auto;
+		background-repeat: no-repeat;
+		width: 1.5rem;
+		height: 1.5rem;
 	}
 	.hamburger:hover {
 		cursor: pointer;
@@ -294,8 +305,12 @@ input {
 	.nav-responsive {
 		display: none;
 	}
+	/* Fin estilo Header */
+
+	/* Inicio estilo Intro */
 	.intro {
 		flex-direction: column;
+		padding: 7rem 2rem 2rem;
 	}
 	.intro img,
 	.intro-article {
@@ -305,6 +320,9 @@ input {
 	.intro-article p {
 		padding-block: 2rem;
 	}
+	/* Fin estilo Intro */
+
+	/* Inicio estilo Mid */
 	.mid {
 		background-color: var(--color-secondary);
 	}
@@ -335,6 +353,9 @@ input {
 	.hide {
 		display: none;
 	}
+	/* Fin estilo Mid */
+
+	/* Inicio estilo Pre Footer */
 	.pre-footer {
 		background-color: var(--color-secondary);
 
@@ -351,6 +372,7 @@ input {
 		background-color: var(--color-font-primary);
 		height: 3rem;
 	}
+	/* Fin estilo Pre Footer */
 
 	/* Estilo mobile footer */
 	.footer {
