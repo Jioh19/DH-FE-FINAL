@@ -63,14 +63,6 @@ nav {
 	display: none;
 }
 
-.nav-hidden-checkbox:checked ~ nav {
-	backdrop-filter: blur(10px);
-	background-color: rgba(255, 255, 255, 0.55);
-	z-index: 99;
-	transition: all 0.5s ease-in-out;
-	transform: translateY(230px);
-}
-
 /* Fin de Hamburger logic */
 /* Fin Estilo del Header */
 
@@ -285,7 +277,13 @@ input {
 		position: absolute;
 		top: -140px;
 		right: 0;
-
+	}
+	.nav-hidden-checkbox:checked ~ nav {
+		backdrop-filter: blur(10px);
+		background-color: rgba(255, 255, 255, 0.55);
+		z-index: 99;
+		transition: all 0.5s ease-in-out;
+		transform: translateY(230px);
 	}
 	.hamburger {
 		display: block;
