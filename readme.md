@@ -10,6 +10,7 @@
 - Pseudoelementos y Pseudoclases.
 - Imágenes, íconos, fuentes, background.
 
+#### Info Solución
 - Ancho máximo de 100 rem
 - Media query tablet-mobile en 970px
 - Soporta IPhone SE
