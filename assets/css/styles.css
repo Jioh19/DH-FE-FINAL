@@ -264,7 +264,7 @@ input {
 	transition: all 0.5s ease-in-out;
 }
 
-input:empty ~ label {
+form input:empty ~ label {
 	position: absolute;
 	font-size: small;
 	color: var(--color-font-primary);
@@ -276,14 +276,14 @@ input:empty ~ label {
 	transition: 0.3s;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+form input:focus ~ label,
+form input:valid ~ label {
 	font-size: x-small;
 	top: -10px;
 	left: 14px;
 }
 
-form button {
+form form button {
 	padding-inline: 1.5rem;
 }
 
