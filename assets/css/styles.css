@@ -142,7 +142,9 @@ h1 {
 	align-items: center;
 	font-size: 12px;
 }
-
+.mid-card-title button {
+	padding-inline: 1.7rem;
+}
 .mid-card p {
 	padding-block: 1rem;
 	padding-left: 6rem;
@@ -247,17 +249,42 @@ footer {
 	flex-direction: column;
 }
 
+form {
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+	gap: 0.5rem;
+}
+
 input {
 	border: none;
-	padding: 0.75rem 2.5rem;
+	padding: 0.75rem 1.5rem;
 	border-radius: 30px;
 	color: black;
 	transition: all 0.5s ease-in-out;
 }
-/** Este ::placeholder es más que nada para demostrar que sé usar pseudoclases **/
-input::placeholder {
-	color: black;
-	opacity: 0.5;
+
+input:empty ~ label {
+	position: absolute;
+	font-size: small;
+	color: var(--color-font-primary);
+	top: 12px;
+	left: 2rem;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 4px;
+	padding: 0.2rem;
+	transition: 0.3s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+	font-size: x-small;
+	top: -10px;
+	left: 14px;
+}
+
+form button {
+	padding-inline: 1.5rem;
 }
 
 .footer-update {
@@ -317,6 +344,7 @@ input::placeholder {
 	.nav-hidden-checkbox:checked ~ .hamburger {
 		transition: all 0.5s ease-in-out;
 		background-image: url("../img/icon-close.svg");
+		transform: rotate(90deg);
 	}
 
 	.hamburger {
