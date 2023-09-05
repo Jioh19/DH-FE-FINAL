@@ -37,13 +37,13 @@ header {
 	position: fixed;
 	width: 100%;
 	background-color: rgba(255, 255, 255, 0.85);
-	box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.45);
+	/* box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.45); */
 	z-index: 100;
 	padding: 1rem 6rem;
 }
 .header-container {
 	display: flex;
-	max-width: 100rem;
+	max-width: var(--max-width);
 	margin: auto;
 	justify-content: space-between;
 	align-items: center;
@@ -72,7 +72,7 @@ nav {
 /* Estilo de Intro */
 .intro {
 	display: flex;
-	max-width: 80rem;
+	max-width: var(--max-width);
 	margin-inline: auto;
 	padding: 7rem 2rem;
 }
@@ -112,7 +112,7 @@ h1 {
 .mid-container {
 	display: flex;
 	align-items: center;
-	max-width: 80rem;
+	max-width: var(--max-width);
 	margin: auto;
 }
 .mid h2,
@@ -125,7 +125,7 @@ h1 {
 	padding: 2rem 2rem;
 	display: flex;
 	margin: auto;
-	max-width: 80rem;
+	max-width: var(--max-width);
 	flex-wrap: wrap;
 	background-color: var(--color-quaternary);
 	justify-content: space-around;
@@ -159,13 +159,14 @@ h1 {
 }
 h2 {
 	padding: 4rem;
+	color: var(--color-font-quaternary);
 }
 .bottom-cards {
 	display: flex;
 	gap: 2rem;
-	max-width: 80rem;
+	max-width: var(--max-width);
 	margin: 2rem;
-	
+
 	padding-inline: 2rem;
 	background-color: var(--color-quaternary);
 }
@@ -195,7 +196,7 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 100rem;
+	max-width: var(--max-width);
 	margin: auto;
 }
 .pre-footer button {
@@ -214,7 +215,7 @@ footer {
 .footer {
 	display: flex;
 	margin: auto;
-	max-width: 100rem;
+	max-width: var(--max-width);
 	padding: 2rem;
 	justify-content: space-around;
 }
@@ -270,7 +271,7 @@ input::placeholder {
 	text-align: right;
 	margin-inline: auto;
 	padding-inline: 2rem;
-	max-width: 90rem;
+	max-width: var(--max-width);
 }
 
 /* Fin estilo Footer */
@@ -295,7 +296,7 @@ input::placeholder {
 	}
 	.nav-hidden-checkbox:checked ~ nav {
 		background-color: rgba(255, 255, 255, 0.85);
-		box-shadow: 0 6px 3px 3px rgba(0, 0, 0, 0.45);
+		/* box-shadow: 0 6px 3px 3px rgba(0, 0, 0, 0.45); */
 		transition: all 0.5s ease-in-out;
 		transform: translateX(-130px);
 	}
@@ -345,9 +346,10 @@ input::placeholder {
 		padding-bottom: 2rem;
 	}
 	.mid-container h2 {
+		padding-inline: 0;
 		color: var(--color-quaternary);
 	}
-	/* .mid h2, */
+	.mid h2,
 	.mid p {
 		width: 100%;
 		padding-inline: 2rem;
@@ -367,6 +369,7 @@ input::placeholder {
 	.mid-card-title {
 		background-color: var(--color-primary-trans);
 		border-radius: 30px 0 0 30px;
+		border: blue solid 2px;
 		width: calc(100% + 2rem);
 	}
 	.hide {
