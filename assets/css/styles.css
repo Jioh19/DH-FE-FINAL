@@ -75,7 +75,7 @@ nav {
 	display: flex;
 	max-width: var(--max-width);
 	margin-inline: auto;
-	padding: 7rem 2rem;
+	padding: 7rem 10rem;
 }
 
 .intro img {
@@ -108,6 +108,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	background-color: var(--color-primary);
+	padding-inline: 6rem;
 	color: white;
 }
 .mid-container {
@@ -123,7 +124,7 @@ h1 {
 }
 
 .mid-cards {
-	padding: 2rem 2rem;
+	padding: 2rem 6rem;
 	display: flex;
 	margin: auto;
 	max-width: var(--max-width);
@@ -193,6 +194,7 @@ h2 {
 .pre-footer {
 	margin-top: 5rem;
 	background-color: var(--color-primary);
+	padding-inline: 3rem;
 	color: white;
 }
 .pre-footer-container {
@@ -264,7 +266,7 @@ input {
 	transition: all 0.5s ease-in-out;
 }
 
-form input:empty ~ label {
+input:empty ~ label {
 	position: absolute;
 	font-size: small;
 	color: var(--color-font-primary);
@@ -276,14 +278,14 @@ form input:empty ~ label {
 	transition: 0.3s;
 }
 
-form input:focus ~ label,
-form input:valid ~ label {
+input:focus ~ label,
+input:valid ~ label {
 	font-size: x-small;
 	top: -10px;
 	left: 14px;
 }
 
-form form button {
+form button {
 	padding-inline: 1.5rem;
 }
 
@@ -382,6 +384,7 @@ form form button {
 	/* 970px Inicio estilo Mid */
 	.mid {
 		background-color: var(--color-secondary);
+		padding-inline: 0;
 	}
 	.mid-container {
 		flex-direction: column;
@@ -398,6 +401,7 @@ form form button {
 	}
 	.mid-cards {
 		flex-direction: column;
+		padding: 2rem 2rem;
 		width: 100%;
 	}
 	.mid-cards .mid-card {
@@ -421,7 +425,7 @@ form form button {
 	/* 970px Inicio estilo Pre Footer */
 	.pre-footer {
 		background-color: var(--color-secondary);
-
+		padding-inline: 0;
 		padding-bottom: 2rem;
 	}
 	.pre-footer-container {
