@@ -11,6 +11,6 @@
 - Imágenes, íconos, fuentes, background.
 
 #### Info Solución
-- Ancho máximo parametrizado en 70rem
+- Ancho máximo parametrizado
 - Media query tablet-mobile en 970px
 - Soporta IPhone SE
