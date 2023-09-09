@@ -13,7 +13,6 @@ h2 {
 	font-size: xx-large;
 	color: var(--color-font-primary);
 }
-
 button {
 	border: none;
 	padding: 0.75rem 2rem;
@@ -24,7 +23,6 @@ button {
 button:hover {
 	cursor: pointer;
 }
-
 .shadowed {
 	box-shadow: 0 4px 7px 0px rgba(0, 0, 0, 0.25);
 }
@@ -59,14 +57,12 @@ nav {
 	color: grey;
 	cursor: not-allowed;
 }
-
 /* Hamburger logic */
 .nav-hidden-checkbox,
 .hamburger,
 .inverted-border-radius {
 	display: none;
 }
-
 /* Fin de Hamburger logic */
 /* Fin Estilo del Header */
 
@@ -77,12 +73,10 @@ nav {
 	margin-inline: auto;
 	padding: 7rem 10rem;
 }
-
 .intro img {
 	width: 50%;
 	aspect-ratio: 1;
 }
-
 .intro-article {
 	display: flex;
 	width: 50%;
@@ -100,7 +94,6 @@ nav {
 h1 {
 	font-size: xx-large;
 }
-
 /* Fin estilo Intro */
 
 /* Estilo de Mid */
@@ -122,7 +115,6 @@ h1 {
 	width: 50%;
 	padding-inline: 2rem;
 }
-
 .mid-cards {
 	padding: 2rem 6rem;
 	display: flex;
@@ -133,7 +125,6 @@ h1 {
 	justify-content: space-around;
 	gap: 2rem;
 }
-
 .mid-card {
 	width: 45%;
 }
@@ -170,7 +161,6 @@ h2 {
 	gap: 2rem;
 	max-width: var(--max-width);
 	margin: 2rem;
-
 	padding-inline: 2rem;
 	background-color: var(--color-quaternary);
 }
@@ -250,14 +240,15 @@ footer {
 	gap: 1rem;
 	flex-direction: column;
 }
-
+.footer-link a {
+	width: fit-content;
+}
 form {
 	display: flex;
 	flex-wrap: nowrap;
 	position: relative;
 	gap: 0.5rem;
 }
-
 form input {
 	border: none;
 	padding: 0.75rem 1.5rem;
@@ -265,37 +256,32 @@ form input {
 	color: black;
 	transition: all 0.5s ease-in-out;
 }
-
 form input:empty ~ label {
 	position: absolute;
 	font-size: small;
 	color: var(--color-font-primary);
 	top: 12px;
 	left: 2rem;
-	background-color: rgba(255, 255, 255, 0.95);
+	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 4px;
 	padding: 0.2rem;
 	transition: 0.3s;
 }
-
 form input:focus ~ label,
 form input:valid ~ label {
 	font-size: x-small;
 	top: -10px;
 	left: 14px;
 }
-
 form button {
 	padding-inline: 1.5rem;
 }
-
 .footer-update {
 	height: 3rem;
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
 }
-
 .footer-copyright {
 	color: var(--color-font-tertiary);
 	text-align: right;
@@ -303,11 +289,9 @@ form button {
 	padding-inline: 2rem;
 	max-width: var(--max-width);
 }
-
 /* Fin estilo Footer */
 
 /* Inicio Media Query */
-
 @media (max-width: 970px) {
 	/* 970px Inicio estilo header */
 	header {
@@ -331,7 +315,6 @@ form button {
 		transition: all 0.5s ease-in-out;
 		transform: translateX(-180px);
 	}
-
 	nav::before {
 		content: "";
 		position: absolute;
@@ -340,15 +323,13 @@ form button {
 		left: -25px;
 		height: 25px;
 		width: 25px;
-		background-image: 
-			radial-gradient(circle at 0% 100%, transparent 25px, rgba(255, 255, 255, 0.85) calc(25px + 1px));
+		background-image: radial-gradient(circle at 0% 100%, transparent 25px, rgba(255, 255, 255, 0.85) calc(25px + 1px));
 	}
 	.nav-hidden-checkbox:checked ~ .hamburger {
 		transition: all 0.5s ease-in-out;
 		background-image: url("../img/icon-close.svg");
 		transform: rotate(90deg);
 	}
-
 	.hamburger {
 		display: block;
 		transition: all 0.5s ease-in-out;
@@ -436,7 +417,6 @@ form button {
 	.pre-footer-container h2 {
 		color: var(--color-quaternary);
 	}
-
 	.pre-footer button {
 		color: var(--color-quaternary);
 		background-color: var(--color-font-primary);
@@ -449,25 +429,21 @@ form button {
 		flex-direction: column-reverse;
 		padding-inline: 2rem;
 	}
-
 	.footer-update {
 		margin-block: 1rem 3rem;
 	}
-
 	.footer-icons {
 		align-items: center;
 		margin-block: 2rem;
 		gap: 1rem;
 		flex-direction: column-reverse;
 	}
-
 	.footer-icon {
 		display: flex;
 		margin-block: 2rem;
 		width: 100%;
 		justify-content: space-between;
 	}
-
 	.footer-copyright {
 		text-align: center;
 	}
